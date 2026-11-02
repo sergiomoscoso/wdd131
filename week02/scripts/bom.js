@@ -1,40 +1,41 @@
-// Declarar las referencias a los elementos del DOM
+// 1. Select the input, button, and list elements from the DOM
 const input = document.querySelector('#favchap');
-const button = document.querySelector('#submit');
+const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
-// Crear el evento 'click' para el botón de agregar
+// 2. Create a click event listener for the Add Chapter button
 button.addEventListener('click', function() {
     
-    // Validar que el input no esté vacío usando .trim()[cite: 2]
+    // 3. Check if the input is not blank before proceeding
     if (input.value.trim() !== '') {
         
-        // Crear los elementos de la lista y el botón de borrar
+        // Create the list item and delete button elements
         const li = document.createElement('li');
         const deleteButton = document.createElement('button');
         
-        // Asignar el texto del input al elemento li y un icono/texto al botón de eliminar
+        // Populate the li text with the input value
         li.textContent = input.value;
+        
+        // Set up the delete button text and accessibility label
         deleteButton.textContent = '❌';
+        deleteButton.setAttribute('aria-label', `Remove ${input.value}`);
         
-        // Agregar el botón de eliminar dentro del elemento li[cite: 2]
+        // Append the delete button to the li, and the li to the list
         li.append(deleteButton);
-        
-        // Agregar el elemento li a la lista ul[cite: 2]
         list.append(li);
         
-        // Añadir el evento para que el botón de eliminar borre el capítulo[cite: 2]
+        // Add a click event listener to the delete button to remove the item
         deleteButton.addEventListener('click', function() {
             list.removeChild(li);
             input.focus();
         });
         
-        // Limpiar el campo de entrada y regresar el foco (cursor)[cite: 2]
+        // Clear the input value and return the focus (cursor) to the input field
         input.value = '';
         input.focus();
         
     } else {
-        // Si está vacío, simplemente devolvemos el foco al input
+        // If the input is blank, just return focus to the input field
         input.focus();
     }
 });
