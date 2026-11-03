@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Picture Album - Sergio Moscoso</title>
+    <meta name="description" content="WDD 131 Week 02 Assignment - Picture Album showcasing various temples using responsive design, CSS Grid, Flexbox, and JavaScript.">
+    <meta name="author" content="Sergio Moscoso">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Open Navigation Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="res-grid">
+            <figure>
+                <img src="images/arequipa.jpg" alt="Arequipa Peru Temple" loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/bogota.jpg" alt="Bogota Colombia Temple" loading="lazy">
+                <figcaption>Bogota Colombia Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/lima.jpg" alt="Lima Peru Temple" loading="lazy">
+                <figcaption>Lima Peru Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt lake.jpg" alt="Salt Lake Temple" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/roma italia.jpg" alt="Rome Italy Temple" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/madrid.jpg" alt="Madrid Spain Temple" loading="lazy">
+                <figcaption>Madrid Spain Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/paris.jpg" alt="Paris France Temple" loading="lazy">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/tokio.jpg" alt="Tokyo Japan Temple" loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/brazil.jpg" alt="São Paulo Brazil Temple" loading="lazy">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 😎 Sergio Moscoso 😎 Colombia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
