@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #17ad99;
+    background-color: #0f766e;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -42,10 +42,11 @@ nav {
     width: 100%;
     background-color: #1b365d;
     display: none;
+    flex-direction: column;
 }
 
 nav.open {
-    display: block;
+    display: flex;
 }
 
 .navigation {
@@ -107,7 +108,7 @@ figcaption {
 }
 
 footer {
-    background-color: #17ad99;
+    background-color: #0f766e;
     color: white;
     text-align: center;
     padding: 1.5rem;
