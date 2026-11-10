@@ -3,7 +3,7 @@
     --secondary-color: #003893;
     --accent-color: #ce1126;
     --bg-color: #f4f4f4;
-    --card-bg: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.92);
     --text-color: #333333;
     --font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +21,6 @@ header {
     color: var(--primary-color);
     text-align: center;
     padding: 1rem;
-    font-size: 2.5rem;
 }
 
 main {
@@ -33,6 +32,10 @@ main {
     gap: 1.5rem;
 }
 
+.hero {
+    width: 100%;
+}
+
 .hero img {
     width: 100%;
     height: auto;
@@ -41,21 +44,25 @@ main {
 }
 
 section {
-    background-color: var(--card-bg);
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 section h2 {
     background-color: var(--secondary-color);
     color: var(--primary-color);
-    padding: 0.6rem 1rem;
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    font-size: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    margin: -1.5rem -1.5rem 1.2rem -1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    font-size: 1.2rem;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul {
@@ -65,23 +72,19 @@ ul {
 }
 
 li {
-    padding: 0.5rem 0;
+    padding: 0.4rem 0;
     border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
 }
 
 li span {
     font-weight: bold;
 }
 
-.weather-content {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.weather-icon {
-    width: 50px;
-    height: 50px;
+.weather-icon-title {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
 }
 
 footer {
@@ -94,12 +97,8 @@ footer {
 
 @media (min-width: 768px) {
     main {
-        position: relative; 
+        position: relative;
         display: block;
-    }
-
-    .hero {
-        width: 100%;
     }
 
     .hero img {
@@ -113,42 +112,45 @@ footer {
         position: absolute;
         top: 2rem;
         left: 2rem;
-        width: 280px;
-        background-color: rgba(255, 255, 255, 0.9);
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.92);
         backdrop-filter: blur(4px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     .data-card h2 {
         background-color: var(--secondary-color);
         color: var(--primary-color);
+        margin: -1.5rem -1.5rem 1.2rem -1.5rem;
+        padding: 0.6rem 1.2rem;
     }
 
-     .weather-card {
+    .weather-card {
         position: absolute;
         top: 2rem;
         right: 2rem;
-        width: 280px;
+        width: 300px;
         background-color: rgba(0, 56, 147, 0.9);
         color: white;
         backdrop-filter: blur(4px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow: hidden;
     }
 
     .weather-card h2 {
         background-color: rgba(0, 30, 90, 0.95);
         color: var(--primary-color);
+        margin: -1.5rem -1.5rem 1.2rem -1.5rem;
+        padding: 0.6rem 1.2rem;
     }
 
     .weather-card li {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .weather-icon {
-        display: none;
-    }
-
-    .weather-card h2::after {
-        content: " ⛅";
+        color: #ffffff;
     }
 }
