@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page: Colombia</title>
+    <meta name="description" content="Country page about Colombia showcasing geography, weather, and key facts for WDD 131.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Colombia</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/hero-large.webp" alt="Landscape of Colombia" width="1000" height="500">
+            </picture>
+        </div>
+        <section class="data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><span>Area:</span> 1,141,748 sq km</li>
+                <li><span>Population:</span> 52,000,000</li>
+                <li><span>Capital:</span> Bogotá</li>
+                <li><span>Languages:</span> Spanish</li>
+                <li><span>Currency:</span> Colombian Peso</li>
+                <li><span>Time Zone:</span> UTC-5</li>
+                <li><span>Calling Code:</span> +57</li>
+                <li><span>Internet TLD:</span> .co</li>
+            </ul>
+        </section>
+        <section class="weather-card">
+            <h2>Weather</h2>
+            <div class="weather-content">
+                <img src="images/weather-icon.svg" alt="Weather Icon" class="weather-icon">
+                <ul class="weather-details">
+                    <li><span>Temperature:</span> <span id="temp">28</span> °C</li>
+                    <li><span>Condition:</span> Partly Cloudy</li>
+                    <li><span>Wind:</span> <span id="wind">10</span> km/h</li>
+                    <li><span>Wind Chill:</span> <span id="chill">N/A</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Sergio Efrain Moscoso Gaviria | Colombia</p>
+        <p id="lastModified">Last Modification: <span id="lastModifiedDate"></span></p>
+    </footer>
+</body>
+</html>
