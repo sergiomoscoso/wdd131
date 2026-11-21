@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        display: block;
+        background: transparent;
+        width: auto;
+    }
+
+    .navigation {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.25rem;
+    }
+
+    .navigation li a {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+    }
+
+    main {
+        max-width: 1100px;
+    }
+
+    .res-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+}
