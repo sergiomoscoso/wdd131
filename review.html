@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted | WDD 131</title>
+  <meta name="description" content="Confirmation page displaying the total number of product reviews submitted using localStorage.">
+  <meta name="author" content="Sergio Efrain Moscoso Gaviria">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Rate a Product</h1>
+  </header>
+
+  <main>
+    <section class="confirmation-card">
+      <h2>Thank You for Your Review!</h2>
+      <p>Your product feedback has been recorded successfully.</p>
+      <div class="counter-box">
+        <p>Total Reviews Submitted:</p>
+        <p class="counter-number"><span id="review-count">0</span></p>
+      </div>
+      <a href="form.html" class="back-link">Submit Another Review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> &bull; Sergio Efrain Moscoso Gaviria &bull; Colombia</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
